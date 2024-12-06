@@ -100,43 +100,37 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
-    /* Cambia la orientación del header a columna */
+    /* Header en la esquina superior izquierda */
     header {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centra los elementos horizontalmente */
-        text-align: center; /* Asegura que el texto esté centrado */
-        padding: 10px; /* Agrega espacio interno para evitar que los elementos se amontonen */
-        overflow: hidden; /* Evita que el contenido se desborde */
+        display: block; /* Cambiamos de flexbox a bloque */
+        position: absolute; /* Para ubicarlo en una esquina */
+        top: 0; /* Lo coloca en la parte superior */
+        left: 0; /* Lo coloca en la esquina izquierda */
+        margin: 10px; /* Espaciado desde los bordes */
     }
 
-    /* Ajusta el tamaño y el comportamiento del texto */
-    header h1,
-    header .texto {
-        font-size: 1.2em; /* Reduce el tamaño del texto */
-        max-width: 90%; /* Asegura que el texto no exceda el contenedor */
-        word-wrap: break-word; /* Divide palabras largas en varias líneas */
-        word-break: break-word; /* Maneja palabras largas */
-        margin: 10px auto; /* Agrega espacio alrededor del texto */
-    }
-
-    /* Logo del header */
+    /* Logo del header (opcional, para ajustar) */
     header .logo {
-        margin-bottom: 20px; /* Agrega separación entre el logo y otros elementos */
+        font-size: 1.5em; /* Ajusta el tamaño del logo si es necesario */
     }
 
-    /* Estilo para el menú de navegación */
-    nav {
+    /* Contenido principal centrado */
+    .main-content {
         display: flex;
-        flex-direction: column; /* Cambia la orientación del menú */
-        margin-top: 20px;
+        flex-direction: column; /* Apila los elementos en una columna */
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        min-height: 100vh; /* Ocupa toda la altura de la ventana */
+        text-align: center; /* Alinea el texto */
+        margin-top: 50px; /* Evita que el header y el contenido se sobrepongan */
     }
 
-    nav a {
-        margin: 10px 0; /* Espaciado entre los enlaces del menú */
-        text-decoration: none; /* Sin subrayado */
-        color: #333; /* Color del texto */
-        font-size: 1em; /* Tamaño del texto */
+    /* Estilo para enlaces o botones en el contenido principal */
+    .main-content a {
+        margin: 10px 0;
+        text-decoration: none;
+        color: #333;
+        font-size: 1em;
     }
 }
 

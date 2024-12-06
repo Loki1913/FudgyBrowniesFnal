@@ -99,7 +99,6 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-/* Asegura que la imagen de fondo cubra la pantalla */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -119,3 +118,4 @@ nav a:hover {
         margin: 10px 0;
     }
 }
+

@@ -100,22 +100,44 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+    /* Cambia la orientación del header a columna */
     header {
+        display: flex;
         flex-direction: column;
-        text-align: center;
+        align-items: center; /* Centra los elementos horizontalmente */
+        text-align: center; /* Asegura que el texto esté centrado */
+        padding: 10px; /* Agrega espacio interno para evitar que los elementos se amontonen */
+        overflow: hidden; /* Evita que el contenido se desborde */
     }
 
+    /* Ajusta el tamaño y el comportamiento del texto */
+    header h1,
+    header .texto {
+        font-size: 1.2em; /* Reduce el tamaño del texto */
+        max-width: 90%; /* Asegura que el texto no exceda el contenedor */
+        word-wrap: break-word; /* Divide palabras largas en varias líneas */
+        word-break: break-word; /* Maneja palabras largas */
+        margin: 10px auto; /* Agrega espacio alrededor del texto */
+    }
+
+    /* Logo del header */
     header .logo {
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Agrega separación entre el logo y otros elementos */
     }
 
+    /* Estilo para el menú de navegación */
     nav {
-        flex-direction: column;
+        display: flex;
+        flex-direction: column; /* Cambia la orientación del menú */
         margin-top: 20px;
     }
 
     nav a {
-        margin: 10px 0;
+        margin: 10px 0; /* Espaciado entre los enlaces del menú */
+        text-decoration: none; /* Sin subrayado */
+        color: #333; /* Color del texto */
+        font-size: 1em; /* Tamaño del texto */
     }
 }
+
 
